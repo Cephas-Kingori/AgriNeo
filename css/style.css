@@ -98,6 +98,72 @@ width:900px;
 height:544;
 }
 
+#aboutus{
+  overflow: hidden;
+  height: 100vh;
+  width: 99vw;
+  border: 1px solid black;
+}
+
+#aboutus h1{
+  font-family: "Spartan";
+  text-transform: uppercase;
+  color:#707070;
+  font-weight: 900;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.features{
+  margin: 0 10px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-column-gap: 200px;
+grid-row-gap:50px;
+grid-template-rows: 1fr 1fr;
+
+}
+
+.features div{
+height: 30vh;
+width: 30vw;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: right;
+}
+
+.features div h2, .features div p{
+align-items: right;
+align-content:  right;
+text-align: right;
+padding: 10px;
+color: #111 !important;
+}
+
+.features div:nth-child(1){
+background-color: rgba(139, 173, 108, .5);
+margin-left: 50px;
+}
+
+.features div:nth-child(2){
+background-color: rgba(53, 169, 219, .3);
+margin-right: 50px;
+}
+
+.features div:nth-child(3){
+background-color: rgba(173, 98, 0, .3);
+margin-left: 50px;
+}
+
+.features div:nth-child(4){
+background-color: rgba(250, 117, 241, .3);
+margin-right: 50px;
+}
+
+
 /* Scroll Down Arrow */
 .container {
   position: absolute;
@@ -184,10 +250,7 @@ height:544;
 }
 /* End Scroll Arrow */
 
-#aboutus{
-  height: 100vh;
-  width: 100vw;
-}
+
 
 
 
