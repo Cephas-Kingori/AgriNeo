@@ -131,7 +131,7 @@ height:544;
   top: 0;
   height: 100%;
   width: 51%;
-  background: #111;
+  background: #FF7800;
 }
 
 .chevron:before {
@@ -184,6 +184,10 @@ height:544;
 }
 /* End Scroll Arrow */
 
+#aboutus{
+  height: 100vh;
+  width: 100vw;
+}
 
 
 
