@@ -126,16 +126,26 @@ grid-template-rows: 1fr 1fr;
 
 }
 
-.features div{
+.feat_1{
 height: 30vh;
 width: 30vw;
 border-radius: 20px;
-display: flex;
-flex-direction: column;
-justify-content: right;
+display: grid;
+grid-template-columns: 30% 70%;
+
 }
 
-.features div h2, .features div p{
+.feat_1 img{
+  margin-left:-60px; 
+}
+
+.feat_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.feat_1 h2, .feat_1 p{
 align-items: right;
 align-content:  right;
 text-align: right;
@@ -162,6 +172,12 @@ margin-left: 50px;
 background-color: rgba(250, 117, 241, .3);
 margin-right: 50px;
 }
+
+.feat_img{
+  height:200px;
+  width:200px;
+}
+
 
 
 /* Scroll Down Arrow */
