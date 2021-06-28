@@ -515,7 +515,7 @@ font-family: "Spartan";
 text-transform: uppercase;
 color:#707070;
 font-weight: 900;
-font-size: 18px;
+font-size: 14px;
 
 }
 
@@ -523,13 +523,13 @@ font-size: 18px;
 text-transform: capitalize;
 color:#707070;
 font-weight: 400;
-font-size: 12px;
+font-size: 8px;
 line-height: 12px;
 margin-bottom: 10px;
 }
 
 .footer_col p a{
-  font-size: 8px;
+  font-size: 6px;
 }
 
 
