@@ -107,7 +107,7 @@ height:544;
   overflow: hidden;
   height: 100vh;
   width: 99vw;
-  border: 1px solid black;
+
 }
 
 #aboutus h1{
@@ -271,6 +271,124 @@ margin-right: 50px;
 }
 /* End Scroll Arrow */
 
+
+footer{
+  border-top: 5px solid rgb(255, 120, 0);
+  height: 50vh;
+  width:99vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 0;
+}
+.footer_col{
+  overflow: hidden;
+}
+.footer_col img{
+height: 50px;
+width:90%;
+}
+.footer_col p{
+text-align: center;
+font-family: "Spartan";
+text-transform: uppercase;
+color:#707070;
+font-weight: 900;
+font-size: 1em;
+line-height: 1.5em;
+margin-bottom: 10px;
+}
+
+.footer_col a{
+text-align: center;
+font-family: "Spartan";
+text-transform: uppercase;
+color:#707070;
+font-weight: 400;
+font-size: 1em;
+
+}
+
+.footer_col a h2{
+text-align: center !important;
+font-family: "Spartan";
+color:#707070;
+font-weight: 900;
+margin-bottom: 20px;
+text-decoration: underline;
+}
+
+/* Signin Page */
+.form_body{
+  background-image: url('../images/g3.png');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sign_options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90%;
+  width: calc(100% - 50px);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  grid-column-gap: 5px;
+}
+.sign_options div{
+  border: 1px solid black;
+  height: 100%;
+  width: calc(100% - 5px);
+  display: flex;
+  justify-content: center;
+
+}
+.form{
+  background-color: #FF7800;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto auto;
+  border-radius: 20px;
+}
+
+input{
+  border-radius: 20px;
+  padding: 6px;
+  line-height: 15px;
+  border: 0 solid black;
+}
+
+.form h2,.form label {
+  color: #fff !important;
+}
+.social_buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto auto;
+}
+.social_buttons span{
+  height: 30px;
+  width: 300px;
+  border-radius: 20px;
+}
+.google{
+  border: 2px solid #DB3236;
+}
+.facebook{
+  background-color: #4267B2;
+}
+
+/* End Signin page */
+
+
+
 /* Responsive media for phone */
 
 @media only screen and (max-width: 500px) {
@@ -285,7 +403,6 @@ margin-right: 50px;
     /* overflow: hidden; */
     height: 150vh;
     width: 99vw;
-    border: 1px solid black;
   }
 
   .features{
@@ -392,8 +509,28 @@ display: none;
   color: #fff;
 }
 
+.footer_col a h2{
+text-align: center;
+font-family: "Spartan";
+text-transform: uppercase;
+color:#707070;
+font-weight: 900;
+font-size: 18px;
 
+}
 
+.footer_col p{
+text-transform: capitalize;
+color:#707070;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+margin-bottom: 10px;
+}
+
+.footer_col p a{
+  font-size: 8px;
+}
 
 
 
@@ -412,20 +549,3 @@ display: none;
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.
