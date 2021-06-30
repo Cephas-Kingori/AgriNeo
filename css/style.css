@@ -323,6 +323,8 @@ text-decoration: underline;
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  margin: auto auto;
+  overflow:hidden;
 }
 
 .sign_options{
@@ -336,7 +338,6 @@ text-decoration: underline;
   grid-column-gap: 5px;
 }
 .sign_options div{
-  border: 1px solid black;
   height: 100%;
   width: calc(100% - 5px);
   display: flex;
@@ -532,9 +533,27 @@ margin-bottom: 10px;
   font-size: 6px;
 }
 
+.sign_options{
+  /* display: flex; */
+  grid-template-rows: 1fr 1fr !important;
+  grid-template-columns: 1fr;
+}
+.sign_options div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
+}
 
-
+.form{
+  width: 99%;
+}
+.form_body{
+  width: 90vw;
+}
+.social_buttons{
+  margin-top: -60px;
+}
 
 
 
