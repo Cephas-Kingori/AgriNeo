@@ -1,0 +1,26 @@
+Dashboard Features:
+Inventory Management
+	Table to show:
+		Supplies(Fertilizer,seed insecticide , etc...) available and quantities
+		Equipment you have
+		Workers and salary info
+		Sales
+	CHARTS:
+		Harvests
+		Sales
+		Yields (cow /chicken produucts)
+
+TODO List
+Activities done and to be done
+Task Allocation
+
+Smart Pest and Disease Recognition
+	Drag/upload photo field
+	Download report
+	Pests and disesase common to the climatic region
+
+Weather Forecast
+	Show daily, weekly monthly weather reports
+
+
+

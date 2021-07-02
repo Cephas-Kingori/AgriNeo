@@ -552,12 +552,21 @@ margin-bottom: 10px;
   width: 90vw;
 }
 .social_buttons{
-  margin-top: -60px;
+  margin-top: -30px;
+}
+#already{
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+.facebook{
+margin-top: -
+20px;
+
 }
 
-
-
-
+input[type="text"],input[type="password"],input[type="email"],input[type="tel"]{
+  width: 80vw;
+}
 
 
 
