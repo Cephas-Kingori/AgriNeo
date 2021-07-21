@@ -22,7 +22,7 @@
   var objowlcarousel = $(".owl-carousel-category");
   if (objowlcarousel.length > 0) {
 	 objowlcarousel.owlCarousel({
-		items: 8,
+		items: 4,
 		lazyLoad: true,
 		pagination: false,
 		loop: true,

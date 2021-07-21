@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no">
+    <meta name="description" content="agriculture">
+    <meta name="author" content="AgriNeo">
+    <title>Mkoolima</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="css/osahan.css" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
+   <!-- Map api -->
+   <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+   <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+</head>
+<body id="page-top">
+   
+    <nav class="navbar navbar-expand navbar-light bg-white static-top osahan-nav sticky-top">
+       &nbsp;&nbsp; 
+       <button class="btn btn-link btn-sm text-secondary order-1 order-sm-0" id="sidebarToggle">
+       <i class="fas fa-2x fa-fw fa-bars"></i>
+       </button> &nbsp;&nbsp;
+       <a class="navbar-brand mr-1" href="../index.html"><img class="img-fluid" alt="" src="img/logo.png"></a>
+       <!-- Navbar Search -->
+
+       <!-- Navbar -->
+       <ul class="navbar-nav ml-auto ml-md-0 osahan-right-navbar" style="justify-content: flex-end; width: 90%; display: flex;">
+         <li class="nav-item mx-1">
+            <a class="nav-link" href="../index.html">
+              <i class="fas fa-2x fa-fw fa-home"></i>
+               Homepage
+            </a>
+         </li>
+          <li class="nav-item mx-1">
+             <a class="nav-link" href="about.html">
+               <i class="fas fa-2x fa-fw fa-info-circle"></i>
+                About
+             </a>
+          </li>
+          <li class="nav-item dropdown no-arrow mx-1">
+             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-2x fa-fw fa-tools"></i>
+               Features
+             </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+                <a class="dropdown-item" href="weather.html"><i class="fas fa-cloud-showers-heavy"></i> &nbsp; Weather</a>
+                <a class="dropdown-item" href="features.html"><i class="fas fa-search"></i>&nbsp; Smart Recognition</a>
+                <a class="dropdown-item" href="features.html"><i class="fas fa-list-ol"></i> &nbsp; Inventory Management</a>
+                <a class="dropdown-item" href="features.html"><i class="far fa-newspaper"></i>&nbsp; News</a>
+             </div>
+          </li>
+
+          <li class="nav-item dropdown no-arrow osahan-right-navbar-user">
+             <a class="nav-link dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-2x fa-fw fa-user-circle" id="avatar"></i>
+               <img src="" alt="" id="user_photo" hidden="true">
+               <span id="user_profile">User</span>
+             </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="account.html"><i class="fas fa-fw fa-user-circle"></i> &nbsp; My Account</a>
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="register.html">Register</a>
+                <a class="dropdown-item" href="login.html">Forgot Password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-sign-out-alt"></i> &nbsp; Logout</a>
+             </div>
+          </li>
+       </ul>
+    </nav>
+    <div id="wrapper">
+       <!-- Sidebar -->
+       <ul class="sidebar navbar-nav">
+          <li class="nav-item">
+             <a class="nav-link" href="../index.html">
+             <i class="fas fa-fw fa-home"></i>
+             <span>Home</span>
+             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+            <i class="fas fa-fw fa-info-circle"></i>
+            <span>About</span>
+            </a>
+         </li>
+          
+          <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-fw fa-user"></i>
+             <span>Profile</span>
+             </a>
+             <div class="dropdown-menu">
+                <h6 class="dropdown-header">Account Settings:</h6>
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="register.html">Register</a>
+                <a class="dropdown-item" href="login.html">Forgot Password</a>
+                <div class="dropdown-divider"></div>
+             </div>
+          </li>
+
+          <li class="nav-item dropdown active">
+             <a class="nav-link dropdown-toggle" href="features.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-fw fa-tools"></i>
+             <span>Features</span>
+             </a>
+             <div class="dropdown-menu">
+                <a class="dropdown-item" href="weather.html">Weather</a>
+                <a class="dropdown-item" href="features.html">Pests and Disease recognition</a>
+                <a class="dropdown-item" href="features.html">News</a>
+             </div>
+          </li>
+          <div class="dropdown-divider"></div>
+       </ul>
+       <div id="content-wrapper">
+         <div class="container-fluid pb-0">
+            <div class="video-block section-padding">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="main-title">
+                        <h6>Get forecast of your location by clicking the current location icon <br> <b>OR</b> <br> Search for your current locaton <br> <b>OR</b> <br> Drag and drop the orange location pin. <br> <b>THEN</b> <br> Click Get Forecast</h6>
+                     </div>
+                  </div>
+               </div>
+               <!-- Mapbox Section -->
+                <div class="row" >
+                    <div class="col-xl-12 col-sm-12 mb-12">
+                        <div class="channels-card" style="height: 30em;" id="map">
+
+                            <!-- Insert plugin for the geocoding -->
+                            <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+                            <!-- Stylesheets for geo coding -->
+                            <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css"/>
+
+                            <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+                            <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+                            <style>
+                                 .coordinates {
+                                    background: rgba(0, 0, 0, 0.5);
+                                    color: #fff;
+                                    position: relative;
+                                    bottom: 0;
+                                    width: 100%;
+                                    padding: 5px 10px;
+                                    font-size: 11px;
+                                    line-height: 18px;
+                                    border-radius: 3px;
+                                    display: none;
+                                }
+
+                                .marker{
+                                    display: flex; justify-self: left; position: relative; margin-top: 0; margin-left: 0%;
+                                }
+
+                            </style>
+
+                        </div>
+                        <!-- Marker -->
+                        <div class="marker">
+                           <pre id="coordinates" class="coordinates"></pre>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-sm-12 mb-12">
+                       <form action="" id="weatherForm" name="weatherForm">
+                           <input type="text" id="long" hidden value="0" name="long" placeholder="longitude" required="false">
+                           <input type="text" value="0" hidden id="lat" name="lat" placeholder="latitude" required="false">
+                           <div class="row">
+                              <div class="col-12" style="display: flex; justify-content: center;">
+                                 <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Get Forcast</button>
+                              </div>
+                           </div>
+                       </form>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                  <div class="col-md-12">
+                     <div class="main-title">
+                        <h6 style="color: blue; font-size: larger;">4 day forecast with hourly Granularity</h6>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <style>
+                        .owl-item{
+                           min-width: 256px;
+                        }
+                     </style>
+                     <div class="owl-carousel owl-carousel-category" id="short_term_weather_cards">
+                        <div class="item" id="item0"></div>
+                        <div class="item" id="item1"></div>
+                        <div class="item" id="item2"></div>
+                        <div class="item" id="item3"></div>
+                        <div class="item" id="item4"></div>
+                        <div class="item" id="item5"></div>
+                        <div class="item" id="item6"></div>
+                        <div class="item" id="item7"></div>
+                        <div class="item" id="item8"></div>
+                        <div class="item" id="item9"></div>
+                        <div class="item" id="item10"></div>
+
+                        <div class="item" id="item11"></div>
+                        <div class="item" id="item12"></div>
+                        <div class="item" id="item13"></div>
+                        <div class="item" id="item14"></div>
+                        <div class="item" id="item15"></div>
+                        <div class="item" id="item16"></div>
+                        <div class="item" id="item17"></div>
+                        <div class="item" id="item18"></div>
+                        <div class="item" id="item19"></div>
+                        <div class="item" id="item20"></div>
+
+                        <div class="item" id="item21"></div>
+                        <div class="item" id="item22"></div>
+                        <div class="item" id="item23"></div>
+                        <div class="item" id="item24"></div>
+                        <div class="item" id="item25"></div>
+                        <div class="item" id="item26"></div>
+                        <div class="item" id="item27"></div>
+                        <div class="item" id="item28"></div>
+                        <div class="item" id="item29"></div>
+                        <div class="item" id="item30"></div>
+
+                        <div class="item" id="item31"></div>
+                        <div class="item" id="item32"></div>
+                        <div class="item" id="item33"></div>
+                        <div class="item" id="item34"></div>
+                        <div class="item" id="item35"></div>
+                        <div class="item" id="item36"></div>
+                        <div class="item" id="item37"></div>
+                        <div class="item" id="item38"></div>
+                        <div class="item" id="item39"></div>
+                        <div class="item" id="item40"></div>
+
+                        <div class="item" id="item41"></div>
+                        <div class="item" id="item42"></div>
+                        <div class="item" id="item43"></div>
+                        <div class="item" id="item44"></div>
+                        <div class="item" id="item45"></div>
+                        <div class="item" id="item46"></div>
+                        <div class="item" id="item47"></div>
+                        <div class="item" id="item48"></div>
+                        <div class="item" id="item49"></div>
+                        <div class="item" id="item50"></div>
+
+                        <div class="item" id="item51"></div>
+                        <div class="item" id="item52"></div>
+                        <div class="item" id="item53"></div>
+                        <div class="item" id="item54"></div>
+                        <div class="item" id="item55"></div>
+                        <div class="item" id="item56"></div>
+                        <div class="item" id="item57"></div>
+                        <div class="item" id="item58"></div>
+                        <div class="item" id="item59"></div>
+                        <div class="item" id="item60"></div>
+
+                        <div class="item" id="item61"></div>
+                        <div class="item" id="item62"></div>
+                        <div class="item" id="item63"></div>
+                        <div class="item" id="item64"></div>
+                        <div class="item" id="item65"></div>
+                        <div class="item" id="item66"></div>
+                        <div class="item" id="item67"></div>
+                        <div class="item" id="item68"></div>
+                        <div class="item" id="item69"></div>
+                        <div class="item" id="item70"></div>
+
+                        <div class="item" id="item71"></div>
+                        <div class="item" id="item72"></div>
+                        <div class="item" id="item73"></div>
+                        <div class="item" id="item74"></div>
+                        <div class="item" id="item75"></div>
+                        <div class="item" id="item76"></div>
+                        <div class="item" id="item77"></div>
+                        <div class="item" id="item78"></div>
+                        <div class="item" id="item79"></div>
+                        <div class="item" id="item80"></div>
+
+                        <div class="item" id="item81"></div>
+                        <div class="item" id="item82"></div>
+                        <div class="item" id="item83"></div>
+                        <div class="item" id="item84"></div>
+                        <div class="item" id="item85"></div>
+                        <div class="item" id="item86"></div>
+                        <div class="item" id="item87"></div>
+                        <div class="item" id="item88"></div>
+                        <div class="item" id="item89"></div>
+                        <div class="item" id="item90"></div>
+
+                        <div class="item" id="item91"></div>
+                        <div class="item" id="item92"></div>
+                        <div class="item" id="item93"></div>
+                        <div class="item" id="item94"></div>
+                        <div class="item" id="item95"></div>
+                        <div class="item" id="item96"></div>
+                     </div>
+                  </div>
+               </div>
+
+                <hr>
+
+                <div class="row">
+                  <div class="col-md-12">
+                     <div class="main-title">
+                        <h6 style="color: blue; font-size: larger;"> 30 Day Forecast</h6>
+                     </div>
+                  </div>
+               </div>
+                <!-- Long term weather forecast -->
+                <div class="row" id="long_term_weather_cards">
+
+                </div>
+            </div>
+
+         </div>
+          <!-- /.container-fluid -->
+          <!-- Sticky Footer -->
+          <footer class="sticky-footer">
+            <div class="container">
+               <div class="row no-gutters">
+                  <div class="col-lg-6 col-sm-6">
+                     <p class="mt-1 mb-0"><strong class="text-dark">By AgriNeo</strong>. 
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 text-right">
+                     <div class="app">
+                        <a href="#"><img alt="" src="img/logo.png"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+       </div>
+       <!-- /.content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+             </div>
+             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+             <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" onclick="logout('../index.html');">Logout</a>
+             </div>
+          </div>
+       </div>
+    </div>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/custom.js"></script>
+    <!-- Index scripts (check authentication )-->
+    <script src="js/authentication.js"></script>
+    <script src="js/logout.js"></script>
+    <!-- Weather  js info -->
+    <script src="js/weather_map.js"></script>
+ </body>
+</html>
