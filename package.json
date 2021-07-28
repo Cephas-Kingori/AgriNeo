@@ -1,0 +1,22 @@
+{
+  "name": "mkoolima",
+  "version": "1.0.0",
+  "description": "Mkoolima",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cephas-Kingori/AgriNeo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cephas-Kingori/AgriNeo/issues"
+  },
+  "homepage": "https://github.com/Cephas-Kingori/AgriNeo#readme",
+  "dependencies": {
+    "firebase": "^8.8.0"
+  }
+}
