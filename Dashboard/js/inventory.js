@@ -81,6 +81,37 @@ function getTasks() {
 
 getTasks();
 
+function getEmployee(){
+  var keys = 0;
+  var tbodyRef = document.getElementById('employee').getElementsByTagName('tbody')[0];
+  console.log(tbodyRef);
+  firebase.database().ref("Employee").child('/').once('value', function(snapshot){
+    snapshot.forEach(function(childSnap){
+      var childKey = childSnap.key;
+      var childdat = childSnap.val();
+
+      var row = tbodyRef.insertRow(keys);
+
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+
+      cell1.innerHTML = "<div class='font-weight-bold'>"+childdat['first_name']+"</div>";
+      cell2.innerHTML = "<div class='font-weight-bold'>"+childdat['last_name']+"</div>";
+      cell3.innerHTML = "<div class='font-weight-medium'>"+childdat['role']+"</div>";
+      cell4.innerHTML = "<div class='font-weight-bold'>"+childdat['number']+"</div>";
+      cell5.innerHTML = "<div class='font-weight-medium'>"+childdat['salary']+"</div>";
+      keys = keys +1;
+
+    });
+
+  });
+
+}
+getEmployee();
+
 
 
 
@@ -105,6 +136,19 @@ function addTask() {
     task_status:"todo",
 
   });
+}
+
+function writeEmployeeData() {
+  var d = new Date();
+  var n = d.getTime();
+  firebase.database().ref("Employee").child(n).set({
+    first_name:document.getElementById('fname').value,
+    last_name:document.getElementById('lname').value,
+    role:document.getElementById('role').value,
+    salary:document.getElementById('salary').value,
+    number:document.getElementById('number').value
+  });
+
 }
 
 
