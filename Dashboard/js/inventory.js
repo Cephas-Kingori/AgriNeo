@@ -9,105 +9,191 @@ const firebaseConfig = {
   measurementId: "G-6KT3WN11FC"
 };
 firebase.initializeApp(firebaseConfig);
+var user =firebase.auth().currentUser;
+if (user != null) {
+  var uid = user.uid;
+  console.log("in");
+}else{
+
+}
+
+
+function init() {
+
+  if (firebase.auth().currentUser) {
+    // user = firebase.auth().currentUser;
+  // uid = user.uid;
+  console.log(uid);
+  } else {
+    firebase.auth().signInAnonymously()
+    .then(() => {
+      user = firebase.auth().currentUser;
+      uid = user.uid;
+      // return uid;
+      // console.log(uid);
+
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+
+      // ...
+    });
+
+  }
+
+}
+init();
 
 function getData(){
-  var tbodyRef = document.getElementById('eq_table').getElementsByTagName('tbody')[0];
-  console.log(tbodyRef);
-  firebase.database().ref("Equipment").child('/').once('value', function(snapshot){
-    snapshot.forEach(function(childSnap){
-      var childKey = childSnap.key;
-      var childdat = childSnap.val();
-      console.log(childdat['eq_name']);
+  firebase.auth().signInAnonymously()
+  .then(() => {
+    var keys = 0;
+    console.log(uid);
+    user = firebase.auth().currentUser;
+    uid = user.uid;
+    var tbodyRef = document.getElementById('eq_table').getElementsByTagName('tbody')[0];
+    // console.log(tbodyRef);
+    firebase.database().ref(uid).child('Equipment').child('/').once('value', function(snapshot){
+      snapshot.forEach(function(childSnap){
+        var childKey = childSnap.key;
+        var childdat = childSnap.val();
+        // console.log(childdat['eq_name']);
 
-      var row = tbodyRef.insertRow(keys);
+        var row = tbodyRef.insertRow(keys);
 
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
 
-      cell1.innerHTML = "<div class='font-weight-bold'>"+childdat['eq_name']+"</div>";
-      cell2.innerHTML = childdat['eq_num'];
-      cell3.innerHTML = "<div class='font-weight-medium'>"+childdat['eq_desc']+"</div>";
-      keys = keys +1;
+        cell1.innerHTML = "<div class='font-weight-bold'>"+childdat['eq_name']+"</div>";
+        cell2.innerHTML = childdat['eq_num'];
+        cell3.innerHTML = "<div class='font-weight-medium'>"+childdat['eq_desc']+"</div>";
+        keys = keys +1;
+
+      });
 
     });
 
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorMessage);
+
+
+    // ...
   });
 
 }
 getData();
 
 function getTasks() {
+  init();
   // Get Todo list task_status
-  var todolist = document.getElementById('todolist');
+  firebase.auth().signInAnonymously()
+  .then(() => {
+    user = firebase.auth().currentUser;
+    uid = user.uid;
+    var todolist = document.getElementById('todolist');
 
 
-  firebase.database().ref("Todo").child('/').once('value', function(snapshot){
-    snapshot.forEach(function(childSnap){
-      var childKey = childSnap.key;
-      var childdat = childSnap.val();
-      // var stat = childdat['eq_name']);
+    firebase.database().ref(uid).child("Todo").child('/').once('value', function(snapshot){
+      snapshot.forEach(function(childSnap){
+        var childKey = childSnap.key;
+        var childdat = childSnap.val();
+        // var stat = childdat['eq_name']);
 
 
-      var li = document.createElement("li");
-      var div = document.createElement("div");
-      var lbl = document.createElement("label");
-      var inp = document.createElement("input");
-      var i = document.createElement("i");
-      var sp = document.createElement("span");
+        var li = document.createElement("li");
+        var div = document.createElement("div");
+        var lbl = document.createElement("label");
+        var inp = document.createElement("input");
+        var i = document.createElement("i");
+        var sp = document.createElement("span");
 
-      if ((childdat['task_status'].localeCompare("done"))==0) {
-        li.setAttribute('class','completed');
-      }
+        if ((childdat['task_status'].localeCompare("done"))==0) {
+          li.setAttribute('class','completed');
+        }
 
-      div.setAttribute('class','form-check form-check-flat form-check-label');
-      inp.setAttribute('class','checkbox');
-      inp.setAttribute('type','checkbox');
-      sp.appendChild(document.createTextNode(childdat['task_name']));
-      i.setAttribute('class','remove ti-close');
-      div.appendChild(inp);
+        div.setAttribute('class','form-check form-check-flat form-check-label');
+        inp.setAttribute('class','checkbox');
+        inp.setAttribute('type','checkbox');
+        sp.appendChild(document.createTextNode(childdat['task_name']));
+        i.setAttribute('class','remove ti-close');
+        div.appendChild(inp);
 
-      div.appendChild(sp);
-      li.appendChild(div);
-      li.appendChild(i);
-      todolist.appendChild(li);
+        div.appendChild(sp);
+        li.appendChild(div);
+        li.appendChild(i);
+        todolist.appendChild(li);
 
-      keys = keys +1;
+        keys = keys +1;
+
+      });
 
     });
 
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorMessage);
+
+    // ...
   });
+
+
+
+
 }
 
 getTasks();
 
 function getEmployee(){
-  var keys = 0;
-  var tbodyRef = document.getElementById('employee').getElementsByTagName('tbody')[0];
-  console.log(tbodyRef);
-  firebase.database().ref("Employee").child('/').once('value', function(snapshot){
-    snapshot.forEach(function(childSnap){
-      var childKey = childSnap.key;
-      var childdat = childSnap.val();
 
-      var row = tbodyRef.insertRow(keys);
+  firebase.auth().signInAnonymously()
+  .then(() => {
+    user = firebase.auth().currentUser;
+    uid = user.uid;
+    var keys = 0;
+    var tbodyRef = document.getElementById('employee').getElementsByTagName('tbody')[0];
+    // console.log(uid);
+    firebase.database().ref(uid).child("Employee").child('/').once('value', function(snapshot){
+      snapshot.forEach(function(childSnap){
+        var childKey = childSnap.key;
+        var childdat = childSnap.val();
 
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
+        var row = tbodyRef.insertRow(keys);
 
-      cell1.innerHTML = "<div class='font-weight-bold'>"+childdat['first_name']+"</div>";
-      cell2.innerHTML = "<div class='font-weight-bold'>"+childdat['last_name']+"</div>";
-      cell3.innerHTML = "<div class='font-weight-medium'>"+childdat['role']+"</div>";
-      cell4.innerHTML = "<div class='font-weight-bold'>"+childdat['number']+"</div>";
-      cell5.innerHTML = "<div class='font-weight-medium'>"+childdat['salary']+"</div>";
-      keys = keys +1;
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+
+        cell1.innerHTML = "<div class='font-weight-bold'>"+childdat['first_name']+"</div>";
+        cell2.innerHTML = "<div class='font-weight-bold'>"+childdat['last_name']+"</div>";
+        cell3.innerHTML = "<div class='font-weight-medium'>"+childdat['role']+"</div>";
+        cell4.innerHTML = "<div class='font-weight-bold'>"+childdat['number']+"</div>";
+        cell5.innerHTML = "<div class='font-weight-medium'>"+childdat['salary']+"</div>";
+        keys = keys +1;
+
+      });
 
     });
 
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorMessage);
+
+    // ...
   });
+
+
 
 }
 getEmployee();
@@ -117,9 +203,11 @@ getEmployee();
 
 
 function writeData() {
+  init();
   var d = new Date();
   var n = d.getTime();
-  firebase.database().ref("Equipment").child(n).set({
+
+  firebase.database().ref(uid).child("Equipment").child(n).set({
     eq_name:document.getElementById('equipment').value,
     eq_num:document.getElementById('number').value,
     eq_desc:document.getElementById('desc').value
@@ -128,10 +216,11 @@ function writeData() {
 }
 
 function addTask() {
+  init();
   var d = new Date();
   var n = d.getTime();
 
-  firebase.database().ref("Todo").child(n).set({
+  firebase.database().ref(uid).child("Todo").child(n).set({
     task_name:document.getElementById('taskname').value,
     task_status:"todo",
 
@@ -139,9 +228,10 @@ function addTask() {
 }
 
 function writeEmployeeData() {
+  init();
   var d = new Date();
   var n = d.getTime();
-  firebase.database().ref("Employee").child(n).set({
+  firebase.database().ref(uid).child("Employee").child(n).set({
     first_name:document.getElementById('fname').value,
     last_name:document.getElementById('lname').value,
     role:document.getElementById('role').value,
