@@ -1,0 +1,579 @@
+*{
+  color: #111;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+header{
+  display: flex;
+  height:110px;
+  width: 100vw;
+  flex-direction: row;
+   justify-content: space-between;
+}
+.header_logo{
+height: 100px;
+width: 200px;
+margin-left: 30px;
+overflow: hidden;
+
+}
+
+.header_logo img{
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  overflow: hidden;
+}
+.header_links{
+margin-right: 60px;
+}
+
+.header_links ul{
+  display: flex;
+  flex-direction:row;
+  list-style-type: none;
+}
+
+.header_links ul li{
+  padding: 10px !important;
+}
+.header_links ul li a{
+  font-family: "Spartan";
+  color: grey;
+  font-size: 1em;
+  font-weight: 300;
+  text-decoration: none;
+}
+.header_sign_in{
+  background: #5A9A1F;
+  padding: 10px;
+  border-radius: 20px;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+.banner{
+  height: calc(100vh - 110px);
+  width: 100vw;
+  overflow: hidden !important;
+  display: grid;
+  grid-template-rows: 1.5fr 1.5fr 1fr 1fr;
+}
+.banner_d1{
+  margin-top: -150px !important;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  /* height: 100%; */
+}
+
+
+
+.banner_img{
+  overflow: hidden;
+  margin-top: -5px;
+}
+.banner_content{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding:0 15px;
+}
+.banner_content h1{
+  font-family: "Spartan";
+  text-transform: uppercase;
+  color:#707070;
+  font-weight: 900;
+  font-size: 2.25em;
+
+}
+
+.lmore{
+  margin: 40px auto 0;
+}
+#undraw_dreamer_gxxi{
+  z-index: -99 !important;
+}
+#banner_svg{
+margin-top: -500px !important;
+/* z-index: 999; */
+}
+
+#banner_svg_2{
+width:900px;
+height:544;
+}
+
+#aboutus{
+  overflow: hidden;
+  height: 100vh;
+  width: 99vw;
+
+}
+
+#aboutus h1{
+  font-family: "Spartan";
+  text-transform: uppercase;
+  color:#707070;
+  font-weight: 900;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.features{
+  margin: 0 10px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-column-gap: 200px;
+grid-row-gap:50px;
+grid-template-rows: 1fr 1fr;
+
+}
+
+.feat_1{
+height: 30vh;
+width: 30vw;
+border-radius: 20px;
+display: grid;
+grid-template-columns: 30% 70%;
+
+}
+
+.feat_1 img{
+  margin-left:-60px;
+}
+
+.feat_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.feat_1 h2, .feat_1 p{
+align-items: right;
+align-content:  right;
+text-align: right;
+padding: 10px;
+color: #111 !important;
+}
+
+.features div:nth-child(1){
+background-color: rgba(139, 173, 108, .5);
+margin-left: 50px;
+}
+
+.features div:nth-child(2){
+background-color: rgba(53, 169, 219, .3);
+margin-right: 50px;
+}
+
+.features div:nth-child(3){
+background-color: rgba(173, 98, 0, .3);
+margin-left: 50px;
+}
+
+.features div:nth-child(4){
+background-color: rgba(250, 117, 241, .3);
+margin-right: 50px;
+}
+
+.feat_img{
+  height:200px;
+  width:200px;
+}
+
+
+
+/* Scroll Down Arrow */
+.container {
+  position: absolute;
+  top: 85vh;
+  left: 47%;
+  width: 24px;
+  height: 24px;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #FF7800;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #111;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+/* End Scroll Arrow */
+
+
+footer{
+  border-top: 5px solid rgb(255, 120, 0);
+  height: 50vh;
+  width:99vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 0;
+}
+.footer_col{
+  overflow: hidden;
+}
+.footer_col img{
+height: 50px;
+width:90%;
+}
+.footer_col p{
+text-align: center;
+font-family: "Spartan";
+text-transform: uppercase;
+color:#707070;
+font-weight: 900;
+font-size: 1em;
+line-height: 1.5em;
+margin-bottom: 10px;
+}
+
+.footer_col a{
+text-align: center;
+font-family: "Spartan";
+text-transform: uppercase;
+color:#707070;
+font-weight: 400;
+font-size: 1em;
+
+}
+
+.footer_col a h2{
+text-align: center !important;
+font-family: "Spartan";
+color:#707070;
+font-weight: 900;
+margin-bottom: 20px;
+text-decoration: underline;
+}
+
+/* Signin Page */
+.form_body{
+  background-image: url('../images/g3.png');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: auto auto;
+  overflow:hidden;
+}
+
+.sign_options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90%;
+  width: calc(100% - 50px);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  grid-column-gap: 5px;
+}
+.sign_options div{
+  height: 100%;
+  width: calc(100% - 5px);
+  display: flex;
+  justify-content: center;
+
+}
+.form{
+  background-color: #FF7800;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto auto;
+  border-radius: 20px;
+}
+
+input{
+  border-radius: 20px;
+  padding: 6px;
+  line-height: 15px;
+  border: 0 solid black;
+}
+
+.form h2,.form label {
+  color: #fff !important;
+}
+.social_buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto auto;
+}
+.social_buttons span{
+  height: 30px;
+  width: 300px;
+  border-radius: 20px;
+}
+.google{
+  border: 2px solid #DB3236;
+}
+.facebook{
+  background-color: #4267B2;
+}
+
+/* End Signin page */
+
+
+
+/* Responsive media for phone */
+
+@media only screen and (max-width: 500px) {
+  .features{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  }
+
+  #aboutus{
+    /* overflow: hidden; */
+    height: 150vh;
+    width: 99vw;
+  }
+
+  .features{
+  grid-template-columns: 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap:10px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  }
+
+  .feat_1{
+  height: 30vh;
+  width: 85vw;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-left: 20px !important;
+  margin-right: 0px !important;
+
+  }
+
+  .feat_1 h2, .feat_1 p{
+  padding: 5px;
+  color: #111 !important;
+  }
+  .feat_1 h2{
+    font-size: 18px;
+  }
+  .feat_img{
+    height:150px;
+    width:150px;
+  }
+  .feat_1 img{
+    margin-left:-30px;
+  }
+  .banner_content h1{
+    font-family: "Spartan";
+    text-transform: uppercase;
+    color:#707070;
+    font-weight: 900;
+    font-size: 1em;
+
+  }
+.banner_img{
+  margin-left: -100px !important;
+  z-index: -99;
+}
+  #banner_svg_2{
+  width:300px;
+  height:955px;
+
+  }
+
+  #banner_svg{
+  margin-top: -340px !important;
+
+  }
+
+.banner_d1{
+  margin-top: -310px !important;
+  /* margin-bottom: 280px; */
+}
+
+.lmore{
+  margin: 5px auto 0;
+}
+#sd{
+    margin-top: -60px !important;
+}
+header{
+  display: flex;
+  height:110px;
+  width: 100vw;
+  flex-direction: row;
+   justify-content: space-between;
+}
+.header_logo{
+height: 100px;
+width: 100px;
+margin-left: 5px;
+overflow: hidden;
+
+}
+
+.header_links{
+margin-right: 60px;
+display: none;
+}
+
+.header_links ul{
+  display: flex;
+  flex-direction:column;
+  list-style-type: none;
+  width: 100vw;
+  margin-top: 2px;
+  margin-bottom: 100px !important;
+  z-index: 99;
+  background-color: #5A9A1F;
+  justify-content: center;
+}
+.header_links ul li a{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.footer_col a h2{
+text-align: center;
+font-family: "Spartan";
+text-transform: uppercase;
+color:#707070;
+font-weight: 900;
+font-size: 14px;
+
+}
+
+.footer_col p{
+text-transform: capitalize;
+color:#707070;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+margin-bottom: 10px;
+}
+
+.footer_col p a{
+  font-size: 6px;
+}
+
+.sign_options{
+  /* display: flex; */
+  grid-template-rows: 1fr 1fr !important;
+  grid-template-columns: 1fr;
+}
+.sign_options div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.form{
+  width: 99%;
+}
+.form_body{
+  width: 90vw;
+}
+.social_buttons{
+  margin-top: -30px;
+}
+#already{
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+.facebook{
+margin-top: -
+20px;
+
+}
+
+input[type="text"],input[type="password"],input[type="email"],input[type="tel"]{
+  width: 80vw;
+}
+
+
+
+
+
+
+
+
+
+}
