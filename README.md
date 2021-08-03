@@ -7,6 +7,10 @@ increase produce by incorporating technology in their day to day activities. Cur
 3. News feed RSS: The application disseminates relevant information to farmers such as pest and disease outbreaks, weather updates and the best farming solutions through se
 4. Seed recommendation:This feature will give farmers a choice of seeds that are recommended for their regions based on their location.
 
+**HOW TO USE IT **
+
+Visit our live website for a demo on the application : https://mkoolima-782e6.web.app/
+
 **FUTURE**
 1. include computer vision to identify pests and diseases.
 2. Optimize the code structure, make it easier to extend
