@@ -11,11 +11,11 @@ increase produce by incorporating technology in their day to day activities. Cur
 
 Visit our live website for a demo on the application : https://mkoolima-782e6.web.app/
 
-**FUTURE**
+**FUTURE UPGRADES**
 1. include computer vision to identify pests and diseases.
 2. Optimize the code structure, make it easier to extend
-3. Improve performance and benchmark
-4. Improve the quality of code and comments
+3. Provide USSD and SMS features
+4. Provide REST API's for our seed database
 
 **CONTRIBUTION**
 
