@@ -37,8 +37,12 @@ map.addControl(geolocate);
 
 // try locating the user on load
 map.on('load', function() {
+
 geolocate.trigger();
+
 });
+
+
 
 geolocate.on('geolocate', function(e) {
    var long = e.coords.longitude;
@@ -112,6 +116,13 @@ geolocate.on('geolocate', function(e) {
  //add compass and navigation
  var nav = new mapboxgl.NavigationControl();
  map.addControl(nav, 'top-right');
+
+ $('document').ready(function(){
+    setTimeout(function(){
+        map.resize();
+    }, 8000);
+ 
+});
 
  //////////////////////////// End of Mapbox Functions ///////////////////////////////////////////
 

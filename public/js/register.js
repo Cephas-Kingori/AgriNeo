@@ -77,8 +77,12 @@
 
       // if form was valid ..................
       if ($(this).valid()) {  
-          console.log("valid");
-          
+            //prevent double submissions
+            if($(this).data === "sumitted"){
+              e.preventDefault();
+          }else{
+              $(this).data = "submitted";
+          }          
           //pick the users input
           var email = document.getElementById("email").value;
           var phone = document.getElementById("phone").value;
@@ -117,7 +121,6 @@
           firebase.database().ref("user_information/").push({
                 email: email,
                 phone: phone,
-                password: password,
           }).then(
                 function(response){
                   swal({

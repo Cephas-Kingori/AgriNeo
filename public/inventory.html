@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no">
+    <meta name="description" content="agriculture">
+    <meta name="author" content="Cephas Kingori Wangari">
+    <meta name="phone" content="254746485236">
+    <meta name="author" content="AgriNeo">
+    <title>Mkoolima</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="css/osahan.css" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
+    <style>
+        .error{
+           color: red;
+        }
+    </style>
+</head>
+<body id="page-top">
+
+   <div id= "loading">
+      <div style="margin: 0 auto;" >
+          <div class="loader"></div>
+      </div>
+   </div>
+
+   <div id="body-content" style="display: none;">
+    <nav class="navbar navbar-expand navbar-light bg-white static-top osahan-nav sticky-top">
+       &nbsp;&nbsp; 
+       <button class="btn btn-link btn-sm text-secondary order-1 order-sm-0" id="sidebarToggle">
+       <i class="fas fa-2x fa-fw fa-bars"></i>
+       </button> &nbsp;&nbsp;
+       <a class="navbar-brand mr-1" href="../index.html"><img class="img-fluid" alt="" src="img/logo.png"></a>
+       <!-- Navbar Search -->
+
+       <!-- Navbar -->
+       <ul class="navbar-nav ml-auto ml-md-0 osahan-right-navbar" style="justify-content: flex-end; width: 90%; display: flex;">
+         <li class="nav-item mx-1">
+            <a class="nav-link" href="../index.html">
+              <i class="fas fa-2x fa-fw fa-home"></i>
+               Homepage
+            </a>
+         </li>
+          <li class="nav-item mx-1">
+             <a class="nav-link" href="about.html">
+               <i class="fas fa-2x fa-fw fa-info-circle"></i>
+                About
+             </a>
+          </li>
+          <li class="nav-item dropdown no-arrow mx-1">
+             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-2x fa-fw fa-tools"></i>
+               Features
+             </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+               <a class="dropdown-item" href="weather.html"><i class="fas fa-cloud-showers-heavy"></i> &nbsp; Weather</a>
+               <a class="dropdown-item" href="features.html"><i class="fas fa-search"></i>&nbsp; Smart Recognition</a>
+               <a class="dropdown-item" href="inventory.html"><i class="fas fa-list-ol"></i> &nbsp; Inventory Management</a>
+               <a class="dropdown-item" href="news.html"><i class="far fa-newspaper"></i>&nbsp;News</a>
+               <a class="dropdown-item" href="seeds.html"><i class="fas fa-seedling"></i>&nbsp; Seed Choice</a>
+             </div>
+          </li>
+
+          <li class="nav-item dropdown no-arrow osahan-right-navbar-user">
+             <a class="nav-link dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-2x fa-fw fa-user-circle" id="avatar"></i>
+               <img src="" alt="" id="user_photo" hidden="true">
+               <span id="user_profile">User</span>
+             </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="account.html"><i class="fas fa-fw fa-user-circle"></i> &nbsp; My Account</a>
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="register.html">Register</a>
+                <a class="dropdown-item" href="login.html">Forgot Password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-sign-out-alt"></i> &nbsp; Logout</a>
+             </div>
+          </li>
+       </ul>
+    </nav>
+    <div id="wrapper">
+       <!-- Sidebar -->
+       <ul class="sidebar navbar-nav">
+          <li class="nav-item">
+             <a class="nav-link" href="../index.html">
+             <i class="fas fa-fw fa-home"></i>
+             <span>Home</span>
+             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+            <i class="fas fa-fw fa-info-circle"></i>
+            <span>About</span>
+            </a>
+         </li>
+          
+          <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-fw fa-user"></i>
+             <span>Profile</span>
+             </a>
+             <div class="dropdown-menu">
+                <h6 class="dropdown-header">Account Settings:</h6>
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="register.html">Register</a>
+                <a class="dropdown-item" href="login.html">Forgot Password</a>
+                <div class="dropdown-divider"></div>
+             </div>
+          </li>
+
+          <li class="nav-item dropdown active">
+             <a class="nav-link dropdown-toggle" href="features.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-fw fa-tools"></i>
+             <span>Features</span>
+             </a>
+             <div class="dropdown-menu">
+               <a class="dropdown-item" href="weather.html"><i class="fas fa-cloud-showers-heavy"></i> &nbsp; Weather</a>
+               <a class="dropdown-item" href="features.html"><i class="fas fa-search"></i>&nbsp; Smart Recognition</a>
+               <a class="dropdown-item" href="inventory.html"><i class="fas fa-list-ol"></i> &nbsp; Inventory Management</a>
+               <a class="dropdown-item" href="news.html"><i class="far fa-newspaper"></i>&nbsp;News</a>
+               <a class="dropdown-item" href="seeds.html"><i class="fas fa-seedling"></i>&nbsp; Seed Choice</a>
+             </div>
+          </li>
+          <div class="dropdown-divider"></div>
+       </ul>
+       <div id="content-wrapper">
+         <div class="container-fluid pb-0">      
+            <h2 style="color: #FF7800;">Inventory</h2>
+
+            <div class="row">
+                <div class="col-md-12 col-xl-6 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Employee Form</h4>
+                        <p class="card-description">
+                          Enter employee details:
+                        </p>
+                        <form id="employee_form" class="form">
+                          <div class="form-group row">
+                            <label for="fname" class="col-sm-3 col-form-label">First Name</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">
+                            </div>
+                          </div>
+      
+                          <div class="form-group row">
+                            <label for="lname" class="col-sm-3 col-form-label">Last Name</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="role" class="col-sm-3 col-form-label">Role</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="role" name="role" placeholder="Role">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="tax_Pin" class="col-sm-3 col-form-label">KRA pin</label>
+                            <div class="col-sm-9">
+                              <input type="tel" class="form-control" id="tax_pin" name="tax_pin" placeholder="KRA Pin">
+                            </div>
+                          </div>
+      
+                          <div class="form-group row">
+                            <label for="salary" class="col-sm-3 col-form-label">Salary</label>
+                            <div class="col-sm-9">
+                              <input type="number" class="form-control" id="salary" name="salary" placeholder="Salary">
+                            </div>
+                          </div>
+                          <div class="form-group row" >
+                            <div class="col-sm-8 offset-sm-2">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="reset" class="btn btn-danger">Clear</button>
+                            </div>
+                        </div>
+                        </form>
+                      </div>
+                    </div>
+                 </div>
+
+                <div class="col-md-12 col-xl-6 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Equipment Form</h4>
+                      <p class="card-description">
+                        Use the form to add equipments
+                      </p>
+                      <form id="equipment_form" class="form">
+                        <div class="form-group row">
+                          <label for="equipment" class="col-sm-3 col-form-label">Equiupment Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="equipment" name="equipment" placeholder="Equipment">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="quantity" class="col-sm-3 col-form-label">Number</label>
+                          <div class="col-sm-9">
+                            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Number">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="description" class="col-sm-3 col-form-label">Description</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                          </div>
+                        </div>
+    
+                        <div class="form-group row" >
+                            <div class="col-sm-8 offset-sm-2">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="reset" class="btn btn-danger">Clear</button>
+                            </div>
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+        
+            </div>
+            <hr>
+
+              <div class="row">
+                <div class="col-xl-7 col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-0">Equipment Table</h4>
+                      <div class="table-responsive">
+                        <table id="eq_table" class="table table-striped table-borderless">
+                          <thead>
+                            <tr style="background-color: #00ACEE; color: white;">
+                              <th>Equipment</th>
+                              <th>Total Number</th>
+                              <th>Desrciption</th>
+                              <th>Delete</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- Data Filled dynamically in inventory.js -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-5 col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">To Do Lists</h4>
+                      <div class="list-wrapper pt-2">
+                          <style>
+                              .list-wrapper ul li{
+                                display: flex;
+                                height: 2.5em;
+                                border: 1px solid #CED4DA;
+                                border-radius: 8px;
+                                padding-left: 1.5em;
+                                padding-top: 0.5em;
+                                padding-right: 2em;
+                                justify-content: space-between;
+                                margin-bottom: 0.812rem;
+                                font-size: .9375rem;
+                                color: black;
+                              }
+                              ul {
+                                list-style-type: none;
+                                }
+                            .checkbox{
+                                margin-right: 1em;
+                            }
+                            .completed span{
+                                text-decoration: line-through #00ACEE 4px;
+                            }
+                          </style>
+                        <ul id="todolist" class="d-flex flex-column-reverse todo-list todo-list-custom">
+                          <!-- Data Filled Automatically in inventory.js -->
+                          <li>List</li>
+                        </ul>
+                        <div class="add-items d-flex mb-0 mt-2">
+                            <form action="" id="add_task_form">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <input type="text" id="taskname" name="taskname" class="form-control todo-list-input" placeholder="Add new task">
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <button class="btn btn-primary" type="submit" style="color: green; border: none; background: none;"><i class="fas fa-plus-circle">add</i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><br><hr><hr><br>
+              <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Employee Table</h4>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="table-responsive">
+                            <table id="employee" class="display expandable-table" style="width:100%">
+                              <thead>
+                                <tr style="background-color: #00ACEE; color: white;">
+                                  <th>First Name</th>
+                                  <th>Last Name</th>
+                                  <th>Role</th>
+                                  <th>KRA Pin</th>
+                                  <th>Salary</th>
+                                  <th>Delete</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <!-- Data Filled Automatically in inventory.js -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+         </div>
+          <!-- /.container-fluid -->
+          <!-- Sticky Footer -->
+          <footer class="sticky-footer">
+            <div class="container">
+               <div class="row no-gutters">
+                  <div class="col-lg-6 col-sm-6">
+                     <p class="mt-1 mb-0"><strong class="text-dark">By AgriNeo</strong>. 
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 text-right">
+                     <div class="app">
+                        <a href="#"><img alt="" src="img/logo.png"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+       </div>
+       <!-- /.content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+             </div>
+             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+             <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" onclick="logout('../index.html');">Logout</a>
+             </div>
+          </div>
+       </div>
+    </div>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/custom.js"></script>
+    <!-- Index scripts (check authentication )-->
+    <script src="js/authentication.js"></script>
+    <script src="js/logout.js"></script>
+
+    <!--form validation using jquery validation-->>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+    <!-- Sweet alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="js/inventory.js"></script>
+
+    <script src="js/loader.js" async defer></script>
+   </div>
+ </body>
+</html>

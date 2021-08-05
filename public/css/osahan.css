@@ -16,7 +16,33 @@
 */
 
 /* Loading */
-
+#loading{
+    padding-top: 15em; 
+    display: flex; 
+    align-content: space-around; 
+    height: 700px;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #18874a;
+    border-bottom: 16px solid #FF7800;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    -webkit-animation: spin 0.35s linear infinite;
+    animation: spin 0.35s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 /* Body */
 
@@ -91,7 +117,7 @@
      color: white;
 }
  .scroll-to-top:hover {
-     background: #343a40;
+     background: #ff7a00;
 }
  .scroll-to-top i {
      font-weight: 800;
@@ -160,15 +186,15 @@
 }
  .sidebar {
      width: 90px !important;
-     background: #5A9A1F;
+     background: #18874a;
     /* Old browsers */
-     background: -moz-linear-gradient(-45deg, #5A9A1F 0%, #506B37 100%);
+     background: -moz-linear-gradient(-45deg, #18874a 0%, #1e5034 100%);
     /* FF3.6-15 */
-     background: -webkit-linear-gradient(-45deg, #5A9A1F 0%,#506B37 100%);
+     background: -webkit-linear-gradient(-45deg, #18874a 0%,#1e5034 100%);
     /* Chrome10-25,Safari5.1-6 */
-     background: linear-gradient(135deg, #5A9A1F 0%,#506B37 100%);
+     background: linear-gradient(135deg, #18874a 0%,#1e5034 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A9A1F', endColorstr='#506B37',GradientType=1 );
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18874a', endColorstr='#1e5034',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
      min-height: 100%;
      z-index: 9;
@@ -440,7 +466,7 @@
 }
 /* Sidebar */
  .channel-sidebar-list {
-     border-top: 1px solid #5A9A1F;
+     border-top: 1px solid #18874a;
      margin: 6px 0 0;
      padding: 7px 14px;
 }
@@ -500,26 +526,26 @@
 }
  .bg-primary, .btn-primary, .btn-outline-primary:hover, .badge-primary {
      border-color: transparent !important;
-     background: #5A9A1F;
+     background: #18874a;
     /* Old browsers */
-     background: -moz-linear-gradient(-45deg, #5A9A1F 0%, #506B37 100%);
+     background: -moz-linear-gradient(-45deg, #18874a 0%, #1e5034 100%);
     /* FF3.6-15 */
-     background: -webkit-linear-gradient(-45deg, #5A9A1F 0%,#506B37 100%);
+     background: -webkit-linear-gradient(-45deg, #18874a 0%,#1e5034 100%);
     /* Chrome10-25,Safari5.1-6 */
-     background: linear-gradient(135deg, #5A9A1F 0%,#506B37 100%);
+     background: linear-gradient(135deg, #18874a 0%,#1e5034 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A9A1F', endColorstr='#506B37',GradientType=1 );
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18874a', endColorstr='#1e5034',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
 }
  .btn-outline-primary{
-     border-color: #5A9A1F;
-     color: #5A9A1F;
+     border-color: #18874a;
+     color: #18874a;
 }
  .text-primary{
-     color: #5A9A1F !important;
+     color: #18874a !important;
 }
  .progress-bar{
-     background-color: #5A9A1F;
+     background-color: #18874a;
 }
  .bg-success, .btn-success, .btn-outline-success:hover, .badge-success {
      border-color: transparent !important;
@@ -698,7 +724,7 @@
      margin: 0 0 5px;
 }
  a {
-     color: #5A9A1F;
+     color: #18874a;
      text-decoration: none !important;
 }
  .btn {
@@ -742,7 +768,7 @@
      line-height: 20px;
 }
  .pagination .page-item.active .page-link {
-     background: #5A9A1F none repeat scroll 0 0;
+     background: #18874a none repeat scroll 0 0;
      border-radius: 2px;
      color: #fff;
      height: 30px;
@@ -959,15 +985,15 @@
 }
 /* Login Pages */
  .login-main-wrapper {
-     background: #5A9A1F;
+     background: #18874a;
     /* Old browsers */
-     background: -moz-linear-gradient(-45deg, #5A9A1F 0%, #506B37 100%);
+     background: -moz-linear-gradient(-45deg, #18874a 0%, #1e5034 100%);
     /* FF3.6-15 */
-     background: -webkit-linear-gradient(-45deg, #5A9A1F 0%,#506B37 100%);
+     background: -webkit-linear-gradient(-45deg, #18874a 0%,#1e5034 100%);
     /* Chrome10-25,Safari5.1-6 */
-     background: linear-gradient(135deg, #5A9A1F 0%,#506B37 100%);
+     background: linear-gradient(135deg, #18874a 0%,#1e5034 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A9A1F', endColorstr='#506B37',GradientType=1 );
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18874a', endColorstr='#1e5034',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
      height: calc(100vh - 0rem);
 }
@@ -1002,15 +1028,15 @@
      padding: 12px 16px;
 }
  .login-main-right .owl-theme .owl-controls .owl-page.active span, .login-main-right .owl-theme .owl-controls .owl-page span:hover {
-     background: #5A9A1F;
+     background: #18874a;
     /* Old browsers */
-     background: -moz-linear-gradient(-45deg, #5A9A1F 0%, #506B37 100%);
+     background: -moz-linear-gradient(-45deg, #18874a 0%, #1e5034 100%);
     /* FF3.6-15 */
-     background: -webkit-linear-gradient(-45deg, #5A9A1F 0%,#506B37 100%);
+     background: -webkit-linear-gradient(-45deg, #18874a 0%,#1e5034 100%);
     /* Chrome10-25,Safari5.1-6 */
-     background: linear-gradient(135deg, #5A9A1F 0%,#506B37 100%);
+     background: linear-gradient(135deg, #18874a 0%,#1e5034 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5A9A1F', endColorstr='#506B37',GradientType=1 );
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18874a', endColorstr='#1e5034',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
 }
 /* Upload Details */
@@ -1079,8 +1105,8 @@
      padding: 14px 0 !important;
 }
  .single-channel-nav .nav-item.active .nav-link, .single-channel-nav .nav-item .nav-link:hover {
-     border-color: #5A9A1F;
-     color: #5A9A1F;
+     border-color: #18874a;
+     color: #18874a;
 }
  .single-channel-nav .navbar-nav {
      margin: 0 0 0 40px;

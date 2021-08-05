@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no">
+    <meta name="description" content="agriculture">
+    <meta name="author" content="Cephas Kingori Wangari">
+    <meta name="phone" content="254746485236">
+    <meta name="author" content="AgriNeo">
+    <title>Mkoolima</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="css/osahan.css" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
+</head>
+
+<body id="page-top">
+
+   <div id= "loading">
+      <div style="margin: 0 auto;" >
+          <div class="loader"></div>
+      </div>
+   </div>
+
+   <div id="body-content" style="display: none;">
+    <nav class="navbar navbar-expand navbar-light bg-white static-top osahan-nav sticky-top">
+       &nbsp;&nbsp; 
+       <button class="btn btn-link btn-sm text-secondary order-1 order-sm-0" id="sidebarToggle">
+       <i class="fas fa-2x fa-fw fa-bars"></i>
+       </button> &nbsp;&nbsp;
+       <a class="navbar-brand mr-1" href="../index.html"><img class="img-fluid" alt="" src="img/logo.png"></a>
+       <!-- Navbar Search -->
+
+       <!-- Navbar -->
+       <ul class="navbar-nav ml-auto ml-md-0 osahan-right-navbar" style="justify-content: flex-end; width: 90%; display: flex;">
+         <li class="nav-item mx-1">
+            <a class="nav-link" href="../index.html">
+              <i class="fas fa-2x fa-fw fa-home"></i>
+               Homepage
+            </a>
+         </li>
+          <li class="nav-item mx-1">
+             <a class="nav-link" href="about.html">
+               <i class="fas fa-2x fa-fw fa-info-circle"></i>
+                About
+             </a>
+          </li>
+          <li class="nav-item dropdown no-arrow mx-1">
+             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-2x fa-fw fa-tools"></i>
+               Features
+             </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+                <a class="dropdown-item" href="weather.html"><i class="fas fa-cloud-showers-heavy"></i> &nbsp; Weather</a>
+                <a class="dropdown-item" href="features.html"><i class="fas fa-search"></i>&nbsp; Smart Recognition</a>
+                <a class="dropdown-item" href="inventory.html"><i class="fas fa-list-ol"></i> &nbsp; Inventory Management</a>
+                <a class="dropdown-item" href="news.html"><i class="far fa-newspaper"></i>&nbsp; News</a>
+                <a class="dropdown-item" href="seeds.html"><i class="fas fa-seedling"></i>&nbsp; Seed Choice</a>
+             </div>
+          </li>
+
+          <li class="nav-item dropdown no-arrow osahan-right-navbar-user">
+             <a class="nav-link dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-2x fa-fw fa-user-circle" id="avatar"></i>
+               <img src="" alt="" id="user_photo" hidden="true">
+               <span id="user_profile">User</span>
+             </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="account.html"><i class="fas fa-fw fa-user-circle"></i> &nbsp; My Account</a>
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="register.html">Register</a>
+                <a class="dropdown-item" href="login.html">Forgot Password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-sign-out-alt"></i> &nbsp; Logout</a>
+             </div>
+          </li>
+       </ul>
+    </nav>
+    <div id="wrapper">
+       <!-- Sidebar -->
+       <ul class="sidebar navbar-nav">
+          <li class="nav-item">
+             <a class="nav-link" href="../index.html">
+             <i class="fas fa-fw fa-home"></i>
+             <span>Home</span>
+             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+            <i class="fas fa-fw fa-info-circle"></i>
+            <span>About</span>
+            </a>
+         </li>
+          
+          <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-fw fa-user"></i>
+             <span>Profile</span>
+             </a>
+             <div class="dropdown-menu">
+                <h6 class="dropdown-header">Account Settings:</h6>
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="register.html">Register</a>
+                <a class="dropdown-item" href="login.html">Forgot Password</a>
+                <div class="dropdown-divider"></div>
+             </div>
+          </li>
+
+          <li class="nav-item dropdown active">
+             <a class="nav-link dropdown-toggle" href="features.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-fw fa-tools"></i>
+             <span>Features</span>
+             </a>
+             <div class="dropdown-menu">
+               <a class="dropdown-item" href="weather.html"><i class="fas fa-cloud-showers-heavy"></i> &nbsp; Weather</a>
+               <a class="dropdown-item" href="features.html"><i class="fas fa-search"></i>&nbsp; Smart Recognition</a>
+               <a class="dropdown-item" href="inventory.html"><i class="fas fa-list-ol"></i> &nbsp; Inventory Management</a>
+               <a class="dropdown-item" href="news.html"><i class="far fa-newspaper"></i>&nbsp;News</a>
+               <a class="dropdown-item" href="seeds.html"><i class="fas fa-seedling"></i>&nbsp; Seed Choice</a> 
+             </div>
+          </li>
+          <div class="dropdown-divider"></div>
+       </ul>
+       <div id="content-wrapper">
+         <div class="container-fluid pb-0">      
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="color: #FF7800;">QUERY SEED DATABASE</h2>
+                    <hr>
+                    <h6 style="color: blue;">Use the form below to search for the best seeds to plant</h6>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                   <form action="#" id="seed_form" name="seed_form">
+                      <div class="osahan-form">
+                         <div class="row">                         
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                   <label for="county" style="color: black; font-size:larger;"><b>In which county is your farm?</b></label>
+                                   <select id="county" name="county" class="custom-select" required>
+                                    <option  value="1" selected>MOMBASA</option>
+                                    <option  value="2">KWALE</option>
+                                    <option  value="3">KILIFI</option>
+                                    <option  value="4">TANA RIVER</option>
+                                    <option  value="5">LAMU</option>
+                                    <option  value="6">TAITA TAVETA</option>
+                                    <option  value="7">GARISSA</option>
+                                    <option  value="8">WAJIR</option>
+                                    <option  value="9">MANDERA</option>
+                                    <option  value="10">MARSABIT</option>
+                                    <option  value="11">ISIOLO</option>
+                                    <option  value="12">MERU</option>
+                                    <option  value="13">THARAKA NITHI</option>
+                                    <option  value="14">EMBU</option>
+                                    <option  value="15">KITUI</option>
+                                    <option  value="16">MACHAKOS</option>
+                                    <option  value="17">MAKUENI</option>
+                                    <option  value="18">NYANDARUA</option>
+                                    <option  value="19">NYERI</option>
+                                    <option  value="20">KIRINYAGA</option>
+                                    <option  value="21">MURANGA</option>
+                                    <option  value="22">KIAMBU</option>
+                                    <option  value="23">TURKANA</option>
+                                    <option  value="24">WEST POKOT</option>
+                                    <option  value="25">SAMBURU</option>
+                                    <option  value="26">UASIN GISHU</option>
+                                    <option  value="27">TRANS NZOIA</option>
+                                    <option  value="28">ELGEYO MARAKWET</option>
+                                    <option  value="29">NANDI</option>
+                                    <option  value="30">BARINGO</option>
+                                    <option  value="31">LAIKIPIA</option>
+                                    <option  value="32">NAKURU</option>
+                                    <option  value="33">NAROK</option>
+                                    <option  value="34">KAJIADO</option>
+                                    <option  value="35">KERICHO</option>
+                                    <option  value="36">BOMET</option>
+                                    <option  value="37">VIHIGA</option>
+                                    <option  value="38">KAKAMEGA</option>
+                                    <option  value="39">BUNGOMA</option>
+                                    <option  value="40">BUSIA</option>
+                                    <option  value="41">SIAYA</option>
+                                    <option  value="42">KISUMU</option>
+                                    <option  value="43">HOMABAY</option>
+                                    <option  value="44">MIGORI</option>
+                                    <option  value="45">KISII</option>
+                                    <option  value="46">NYAMIRA</option>
+                                    <option  value="47">NAIROBI</option>
+                                   </select>
+                                </div>
+                             </div>
+                             <div class="col-lg-12">
+                              <div class="form-group">
+                                 <label for="zone" style="color: black; font-size:larger;"><b>What is the ecological zone of the farm?</b></label>
+                                 <select id="zone" name="zone" class="custom-select" required disabled="true">
+                                    <option value="coastal" selected>Coastal & Dryland (0-900)</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="form-group">
+                                 <label for="crop" style="color: black; font-size:larger;"><b>Type of crop</b></label>
+                                 <select id="crop" name="crop" class="custom-select" required>
+                                    <option  value="CABBAGE" selected>CABBAGE</option>
+                                    <option  value="CAPSICUM">CAPSICUM</option>
+                                    <option  value="CARROT">CARROT</option>
+                                    <option  value="CASSAVA">CASSAVA</option>
+                                    <option  value="CAULIFLOWER">CAULIFLOWER</option>
+                                    <option  value="CHICKPEA">CHICKPEA</option>
+                                    <option  value="CLIMBING BEAN">CLIMBING BEAN</option>
+                                    <option  value="COLLARD">COLLARD</option>
+                                    <option  value="COMMON BEAN">COMMON BEAN</option>
+                                    <option  value="CORIANDER">CORIANDER</option>
+                                    <option  value="COWPEA">COWPEA</option>
+                                    <option  value="DET TOMATO">DET TOMATO</option>
+                                    <option  value="DOLICHOS BEAN">DOLICHOS BEAN</option>
+                                    <option  value="FINGER MILLET">FINGER MILLET</option>
+                                    <option  value="FOXTAIL MILLET">FOXTAIL MILLET</option>
+                                    <option  value="IRISH POTATO">IRISH POTATO</option>
+                                    <option  value="KALE">KALE</option>
+                                    <option  value="MAIZE HYBRID">MAIZE HYBRID</option>
+                                    <option  value="MAIZE OPV">MAIZE OPV</option>
+                                    <option  value="MUNG BEANS/GREENGRAMS">MUNG BEANS/GREENGRAMS</option>
+                                    <option  value="ONION">ONION</option>
+                                    <option  value="PAKCHOY">PAKCHOY</option>
+                                    <option  value="PEARL MILLET">PEARL MILLET</option>
+                                    <option  value="PEPPER (GREENHOUSE)">PEPPER (GREENHOUSE)</option>
+                                    <option  value="PEPPER (HOT)">PEPPER (HOT)</option>
+                                    <option  value="PEPPER (OPEN FIELD)">PEPPER (OPEN FIELD)</option>
+                                    <option  value="PIGEON PEA">PIGEON PEA</option>
+                                    <option  value="PUMPKIN">PUMPKIN</option>
+                                    <option  value="RICE PADDY">RICE PADDY</option>
+                                    <option  value="RICE UPLAND">RICE UPLAND</option>
+                                    <option  value="SORGHUM">SORGHUM</option>
+                                    <option  value="SOYA BEANS">SOYA BEANS</option>
+                                    <option  value="SPINACH">SPINACH</option>
+                                    <option  value="SQUASH">SQUASH</option>
+                                    <option  value="SWEET PEPPER">SWEET PEPPER</option>
+                                    <option  value="SWEET POTATO">SWEET POTATO</option>
+                                    <option  value="TOMATO">TOMATO</option>
+                                    <option  value="WATERMELON">WATERMELON</option>
+                                    <option  value="WHEAT">WHEAT</option>
+                                 </select>
+                              </div>
+                           </div>
+                         </div>
+
+                         <div class="row ">
+                            <div class="col-lg-12">
+                               <div class="main-title">
+                                  <h6 style="color: black;">Click to apply the specific filters:</h6>
+                               </div>
+                            </div>
+                         </div>
+
+                         <div class="row category-checkbox">
+                            <!-- checkbox 1col -->
+                            <div class="col-lg-2 col-xs-6 col-4">
+                                <b style="color: black">Maturity:</b>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input maturity" id="customCheck1" value="Extra_Early">
+                                  <label class="custom-control-label maturity" for="customCheck1">Extra Early</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input maturity" id="customCheck2" value="Early">
+                                  <label class="custom-control-label" for="customCheck2">Early</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input maturity" id="customCheck3" value="Medium">
+                                  <label class="custom-control-label maturity" for="customCheck3">Medium</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input maturity" id="customCheck4" value="Late">
+                                  <label class="custom-control-label" for="customCheck4">Late</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input maturity" id="customCheck5" value="Default" checked>
+                                <label class="custom-control-label" for="customCheck5">Default</label>
+                               </div>
+                            </div>
+                            <!-- checkbox 2col -->
+                            <div class="col-lg-2 col-xs-6 col-4">
+                                <b style="color: black">Season:</b>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input season" id="customCheck6" value="Short">
+                                  <label class="custom-control-label" for="customCheck6">Short</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input season" id="customCheck7" value="Long">
+                                  <label class="custom-control-label" for="customCheck7">Long</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input season" id="customCheck8" value="Both">
+                                  <label class="custom-control-label" for="customCheck8">Both</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input season" id="customCheck9" value="Default" checked>
+                                <label class="custom-control-label" for="customCheck9">Default</label>
+                               </div>
+                            </div>
+                            <!-- checkbox 3col -->
+                            <div class="col-lg-2 col-xs-6 col-4">
+                                <b style="color: black">Drought Resitant:</b>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input drought" id="customCheck11" value="Yes">
+                                  <label class="custom-control-label" for="customCheck11">Yes</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input drought" id="customCheck12" value="No">
+                                  <label class="custom-control-label" for="customCheck12">No</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input drought" id="customCheck13" value="Default" checked>
+                                <label class="custom-control-label" for="customCheck13">Default</label>
+                               </div>
+                            </div>
+                            <!-- checkbox 1col -->
+                            <div class="col-lg-2 col-xs-6 col-4">
+                                <b style="color: black;">Disease resistant:</b>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input disease" id="customCheck16" value="Yes">
+                                  <label class="custom-control-label" for="customCheck16">Yes</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input disease" id="customCheck17" value="No">
+                                  <label class="custom-control-label" for="customCheck17">No</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input disease" id="customCheck18" value="Default" checked>
+                                <label class="custom-control-label" for="customCheck18">Default</label>
+                               </div>
+                            </div>
+                            <!-- checkbox 2col -->
+                            <div class="col-lg-2 col-xs-6 col-4">
+                                <b style="color: black">Consumer Rated:</b>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input consumer" id="customCheck21" value="Yes">
+                                  <label class="custom-control-label" for="customCheck21">Has been rated by consumers</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input consumer" id="customCheck22" value="No">
+                                  <label class="custom-control-label" for="customCheck22">Not yet rated by consumers</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input consumer" id="customCheck23" value="Default" checked>
+                                  <label class="custom-control-label" for="customCheck23">Default</label>
+                               </div>
+                            </div>
+                            <!-- checkbox 3col -->
+                            <div class="col-lg-2 col-xs-6 col-4">
+                                <b style="color: black">Storage & Field pest resistance:</b>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input storage" id="customCheck26" value="Yes">
+                                  <label class="custom-control-label" for="customCheck26">Yes</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input storage" id="customCheck27" value="No">
+                                  <label class="custom-control-label" for="customCheck27">No</label>
+                               </div>
+                               <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input storage" id="customCheck28" value="Default" checked>
+                                  <label class="custom-control-label" for="customCheck28">Default</label>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="osahan-area text-center mt-3">
+                         <button type="reset" class="btn btn-outline-danger">Discard</button>
+                         <button type="submit" class="btn btn-outline-primary">Submit</button>
+                      </div>
+
+                      <!-- RESULTS -->
+                      <hr><hr><h6 id="results_counter" style="color: blue; font-weight: bolder;">Results :</h6><br><hr>
+                      <style>
+                        .result_cell{
+                           border-bottom:1px solid #1a647d;
+                           border-top:1px solid #1a647d;
+                           border-left:1px solid #1a647d;
+                           border-right:1px solid #1a647d;
+                           display: table-cell;
+                        }
+                        .result_label{
+                           border-bottom:1px solid #1a647d;
+                           border-top:1px solid #1a647d;
+                           border-left:1px solid #1a647d;
+                           border-right:1px solid #1a647d;
+                           background-color: #0f242c;
+                           display: table-cell;
+                        }
+                        .result_row{
+                           border-bottom:1px solid #1a647d;
+                           border-top:1px solid #1a647d;
+                           border-left:1px solid #1a647d;
+                           border-right:1px solid #1a647d;
+                           display: table-row;
+                        }
+                        .result_table{
+                          /* max-width: 256px;*/
+                           display: table;
+                           height: 100%;
+                           width: 100%
+                        }
+                        .video-card{
+                           display: flex;
+                           margin-bottom: 2em;
+                        }
+                        /*.video-card{
+
+                        }*/
+                  
+                      </style>
+                      <div id="results" class="row">
+                           <table></table>
+                      </div>
+                      <hr>
+                      <hr>
+                      <div class="terms text-center">
+                         <p class="mb-0">NB: This data has been carefully gathered from KALRO, KEPHIS and seed companies.<br><br> All information about suitable agroecological zones has been gathered from breeders and seed companies, based on their testing and knowledge about product performance. <br><br> However, farmers, retailers and farmer advisors should not rely solely on information provided.<br><br>From <a href="../index.html">mkoolima</a> open sourced via <a href="httP://mbeguchoice.com">Mbegu Choice</a>.</p>
+                         <p class="hidden-xs mb-0">Reach out to mkoolima for qeuries on the seed database at <a href="tel:+254746485236">via phone</a> or <a href="mailto: cephasmarquis2000@gmail.com">Email</a></p>
+                      </div>
+                </form>
+                </div>
+             </div>
+         </div>
+          <!-- /.container-fluid -->
+          <!-- Sticky Footer -->
+          <footer class="sticky-footer">
+            <div class="container">
+               <div class="row no-gutters">
+                  <div class="col-lg-6 col-sm-6">
+                     <p class="mt-1 mb-0"><strong class="text-dark">By AgriNeo</strong>. 
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 text-right">
+                     <div class="app">
+                        <a href="#"><img alt="" src="img/logo.png"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+       </div>
+       <!-- /.content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+             </div>
+             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+             <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" onclick="logout('../index.html');">Logout</a>
+             </div>
+          </div>
+       </div>
+    </div>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+   <!--form validation using jquery validation-->
+   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+   
+    <!-- Custom scripts for all pages-->
+    <script src="js/custom.js"></script>
+    <!-- Index scripts (check authentication )-->
+    <script src="js/authentication.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/seeds.js"></script>
+    <script src="js/loader.js" async defer></script>
+   </div>
+ </body>
+</html>
