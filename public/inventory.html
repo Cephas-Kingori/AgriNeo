@@ -134,7 +134,7 @@
        <div id="content-wrapper">
          <div class="container-fluid pb-0">      
             <h2 style="color: #FF7800;">Inventory</h2>
-
+            <div id="outer_banner"></div>
             <div class="row">
                 <div class="col-md-12 col-xl-6 grid-margin stretch-card">
                     <div class="card">
@@ -256,7 +256,7 @@
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">To Do Lists</h4>
-                      <p style="color: #18874a;">Click the check box to mark the items as either done or not done. <br> Click X to delet the task</p>
+                      <p style="color: #18874a;">Click the check box to mark the items as either done or not done. <br> Click X to delete the task</p>
                       <div class="list-wrapper pt-2">
                           <style>
                               .list-wrapper ul li{
@@ -287,12 +287,12 @@
                           <li>List</li>
                         </ul>
                         <div class="add-items d-flex mb-0 mt-2">
-                            <form action="" id="add_task_form">
-                                <div class="row">
-                                    <div class="col-sm-7">
+                            <form action="" class="form" id="add_task_form" style="width: 100%;">
+                                <div class="form-group row">
+                                    <div class="col-sm-8 offset-sm-1">
                                         <input type="text" id="taskname" name="taskname" class="form-control todo-list-input" placeholder="Add new task">
                                     </div>
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-2">
                                         <button class="btn btn-primary" type="submit" style="color: green; border: none; background: none;"><i class="fas fa-plus-circle">add</i></button>
                                     </div>
                                 </div>

@@ -4,6 +4,44 @@ $(document).ready(function(){
           // User is signed in.
           console.log("we are in");
           const mkoolima_user = firebase.auth().currentUser;
+          if(mkoolima_user.emailVerified == false){
+
+            var parent_banner = document.getElementById("outer_banner");
+            var verify_banner = document.createElement('div');
+            verify_banner.classList.add("alert");
+            verify_banner.classList.add("alert-danger");
+            verify_banner.classList.add("alert-dismissible");
+            verify_banner.classList.add("fade");
+            verify_banner.classList.add("show");
+
+            verify_banner.setAttribute("role", "alert");
+            verify_banner.setAttribute("id", "verify_banner");
+
+            var banner_inner_html = `<strong>
+            <p><h4><i class="fas fa-exclamation-triangle"></i>Verify your email before acessing the inventory!</h4></p></strong> 
+            <hr>
+            This message will disappear automatically after 5 minutes. <br>
+            <hr> 
+            Please check your email inbox for the verification link which was sent and click it and then refresh this page. <strong>Permission to store your inventory will be denied!
+            </strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="outline: none;">
+              <span aria-hidden="false">&times;</span>
+            </button>`;
+            verify_banner.innerHTML = banner_inner_html;
+            parent_banner.appendChild(verify_banner);
+
+
+            setTimeout(function(){        
+              $("#verify_banner").fadeOut(300000, 'linear');
+            }, 100); 
+          }else{
+            //force refresh on the user token if a  user verifies their email
+            firebase.auth().currentUser.getIdToken(true);
+
+            //get the the updated details
+            firebase.auth().currentUser.reload();
+
+          }
 
           const uid = mkoolima_user.uid;
                    
@@ -85,7 +123,13 @@ $(document).ready(function(){
   });
 
 
-  function getUser(){  
+  function getUser(){
+
+    //force refresh on the user token if a  user verifies their email
+    firebase.auth().currentUser.getIdToken(true);
+    //get the the updated details
+    firebase.auth().currentUser.reload();
+  
     const current_user = firebase.auth().currentUser;
     var uid = current_user.uid;
     return uid;     
