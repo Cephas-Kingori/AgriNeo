@@ -24,7 +24,6 @@ $(document).ready(function(){
         console.log("logged in");
     
         const mkoolima_user = firebase.auth().currentUser;
-    
         //what will displayed on the header
         var jina = mkoolima_user.displayName;
         
