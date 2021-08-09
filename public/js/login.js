@@ -109,7 +109,7 @@
                         //alert(error);
                         swal({
                             title: "Error",
-                            text: error.message + "Or check your email for a verification link.",
+                            text: error.message + " Check your email for a verification link or click Sign Up if you have not registered.",
                             icon: "error",
                           });
                       }
