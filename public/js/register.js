@@ -92,36 +92,27 @@
           //firebase to create account based on email / password 
           //createUserWithEmailAndPassword
           firebase.auth().createUserWithEmailAndPassword(email,password).then(
-                  function(response){
-                    console.log(response);
-                    //alert("account created ");
-                    swal({
-                      title: "Account Created!",
-                      text: "Your account at mkoolima has been created. Check your email shortly.",
-                      icon: "success",
-                    });
-
-                  sendVerificationEmail();
-
-                  }
-          ).catch(
-                    function(error){
-                      //alert("something went wrong " + error);
-                      //console.log(error);
-                      swal({
-                        title: "Error",
-                        text: error.message,
-                        icon: "error",
-                      });
-                      reload_after(6000);
-                    }
-          );
-
-          //take user details to real time db 
-          firebase.database().ref("user_information/").push({
+            function(response){
+              console.log(response);
+              //alert("account created ");
+              swal({
+                title: "Account Created!",
+                text: "Your account at mkoolima has been created. Check your email shortly.",
+                icon: "success",
+              });
+       
+            }
+          ).then(function(){
+            //send email
+            sendVerificationEmail();
+          })
+          .then(
+            //take user details to real time db 
+            function(){
+              firebase.database().ref("user_information/").push({
                 email: email,
                 phone: phone,
-          }).then(
+              }).then(
                 function(response){
                   swal({
                     title: "Details Saved!",
@@ -132,9 +123,23 @@
                     redirect_after("login.html", 5000);
                 }
 
-          ).catch(function(error){
-              alert("something went wrong " + error);
-          });
+                ).catch(function(error){
+                    alert("something went wrong " + error);
+                });
+            }
+          )
+          .catch(
+            function(error){
+              //alert("something went wrong " + error);
+              //console.log(error);
+              swal({
+                title: "Error",
+                text: error.message,
+                icon: "error",
+              });
+              reload_after(6000);
+            }
+          );
       }
     });
  });

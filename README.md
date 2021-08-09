@@ -9,7 +9,7 @@ increase produce by incorporating technology in their day to day activities. Cur
 
 **HOW TO USE IT**
 
-Visit our live website for a demo on the application : https://mkoolima-782e6.web.app/
+Visit the Mkoolima web app at : https://mkoolima-782e6.web.app/
 
 **FUTURE UPGRADES**
 1. include computer vision to identify pests and diseases.
